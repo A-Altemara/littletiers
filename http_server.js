@@ -13,6 +13,13 @@ app.use(bodyPasrser.urlencoded({ extended: false }));
 app.use(bodyPasrser.json());
 const { faker } = require('@faker-js/faker');
 const cors = require('cors');
+const chalk = require('chalk')
+
+const error = chalk.bold.red;
+const warning = chalk.hex('#FFA500'); // Orange color
+
+console.log(error('Error!'));
+console.log(warning('Warning!'));
 
 // configure express to serve static files from public directory
 // ------------------------------------------------------------------
