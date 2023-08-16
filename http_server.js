@@ -11,6 +11,8 @@ const db = low(adapter);
 var bodyPasrser = require('body-parser');
 app.use(bodyPasrser.urlencoded({ extended: false }));
 app.use(bodyPasrser.json());
+const { faker } = require('@faker-js/faker');
+const cors = require('cors');
 
 // configure express to serve static files from public directory
 // ------------------------------------------------------------------
@@ -33,7 +35,7 @@ app.post('/test', function (req, res) {
 })
 
 // add user
-// test using curl -H "Content-Type: application/json" -X POST -d '{"name":"peterparker","dob":"dob","email":"peter@mit.edu","usernam":"spideyboy","password":"secret","phone":"555-555-5555","streetaddress":"123 First St","citystatezip":"Manhatten, NY 12345","latitude":"40.7128° N","longitude":"74.0060° W","avatar":faker.internet.avatar()}' http://localhost:3000/add
+// test using curl -H "Content-Type: application/json" -X POST -d '{"name":"peterparker","dob":"dob","email":"peter@mit.edu","usernam":"spideyboy","password":"secret","phone":"555-555-5555","streetaddress":"123 First St","citystatezip":"Manhatten, NY 12345","latitude":"40.7128° N","longitude":"74.0060° W"}' http://localhost:3000/add
 app.post('/add', function (req, res) {
     var user = {
         'name': req.body.name,
