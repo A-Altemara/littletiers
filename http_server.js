@@ -15,6 +15,9 @@ const { faker } = require('@faker-js/faker');
 const cors = require('cors');
 const chalk = require('chalk')
 
+//allow cross-origin resource sharing (CORS)
+app.use(cors());
+
 const error = chalk.bold.red;
 const warning = chalk.hex('#FFA500'); // Orange color
 
