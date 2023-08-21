@@ -70,6 +70,13 @@ app.post('/add', function (req, res) {
 
 // start server
 // -----------------------
-app.listen(3000, () => {
-    console.log(`Running on port 3000!`)
-});
+// app.listen(3000, () => {
+//     console.log(`Running on port 3000!`)
+// });
+
+//Heroku port setup
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 8000;
+}
+app.listen(port);
