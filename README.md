@@ -6,6 +6,10 @@ little tiers
 
 Testing a 3 tier Application to learn sending data to a server with POST and making updates. Using Postman, Digital Ocean, Faker, AWS, lowDB and Express.
 
+## set up for DigitOcean
+
+Runing on ditgial ocean as of 8-20-23
+
 ## MIT License
 
 Copyright (c) 2023 Airiel Altemara
