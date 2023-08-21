@@ -75,8 +75,16 @@ app.post('/add', function (req, res) {
 // });
 
 //Heroku port setup
-let port = process.env.PORT;
-if (port == null || port == "") {
-    port = 8000;
-}
-app.listen(port);
+// let port = process.env.PORT;
+// if (port == null || port == "") {
+//     port = 8000;
+// }
+// app.listen(port);
+
+// Digital Ocean Port
+const port = process.env.PORT || 3001;
+
+// applicaton code goes here
+
+// have node listen on our port
+app.listen(port, () => console.log(`App listening on port ${port}!`));
